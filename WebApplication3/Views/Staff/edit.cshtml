@@ -1,0 +1,58 @@
+﻿@model WebApplication3.Models.staff
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>edit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+<h4>staff</h4>
+<hr />
+<div class="row">
+    <div class="col-lg-6 offset-lg-3 col-12">
+        <form asp-action="edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="role" class="control-label"></label>
+                <input asp-for="role" class="form-control" />
+                <span asp-validation-for="role" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="salary" class="control-label"></label>
+                <input asp-for="salary" class="form-control" />
+                <span asp-validation-for="salary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DOJ" class="control-label"></label>
+                <input asp-for="DOJ" class="form-control" />
+                <span asp-validation-for="DOJ" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-outline-warning" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+</body>
+</html>
